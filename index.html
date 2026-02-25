@@ -1,194 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arun — Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Arun | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header" id="top">
-    <div class="container header-row">
-      <a class="logo" href="#top">Arun<span>.</span></a>
 
-      <nav class="nav" id="nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
-        ☰
-      </button>
-    </div>
+  <header>
+    <h1>Hi, I'm Arun 👋</h1>
+    <p>Flutter & Web Developer</p>
+    <button onclick="showMessage()">Contact Me</button>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <p class="badge">Flutter • Web • Student Developer</p>
-        <h1>Hi, I’m <span class="accent">Arun</span>.<br/>I build clean apps & websites.</h1>
-        <p class="muted">
-          This is a simple demo portfolio. Add your real projects, links, and screenshots later.
-        </p>
-
-        <div class="btn-row">
-          <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn" href="#contact">Contact Me</a>
-        </div>
-
-        <div class="mini-stats">
-          <div class="stat">
-            <div class="stat-num" id="years">0</div>
-            <div class="stat-label">Years Learning</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num" id="apps">0</div>
-            <div class="stat-label">Apps Built</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num" id="projectsCount">0</div>
-            <div class="stat-label">Projects</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card profile-card">
-        <div class="avatar" aria-hidden="true">AJ</div>
-        <h2>Arun Johny</h2>
-        <p class="muted">
-          I like building AMOLED-friendly UIs, simple tools, and polished user experiences.
-        </p>
-        <div class="chip-row">
-          <span class="chip">Flutter</span>
-          <span class="chip">Dart</span>
-          <span class="chip">HTML/CSS</span>
-          <span class="chip">JS</span>
-        </div>
-      </div>
-    </div>
+  <section>
+    <h2>About Me</h2>
+    <p>I build clean apps and simple websites.
+       Passionate about UI and user experience.</p>
   </section>
 
-  <!-- About -->
-  <section class="section" id="about">
-    <div class="container">
-      <h2>About</h2>
-      <p class="muted">
-        Write 3–5 lines about yourself. Mention what you’re learning, what you’ve built, and what you’re looking for.
-      </p>
-
-      <div class="two-col">
-        <div class="card">
-          <h3>What I do</h3>
-          <ul class="list">
-            <li>Build mobile apps (Flutter)</li>
-            <li>Create simple websites</li>
-            <li>Focus on clean UI and performance</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Skills</h3>
-          <div class="skills">
-            <span class="pill">Flutter</span>
-            <span class="pill">Dart</span>
-            <span class="pill">Firebase</span>
-            <span class="pill">HTML</span>
-            <span class="pill">CSS</span>
-            <span class="pill">JavaScript</span>
-            <span class="pill">Git</span>
-          </div>
-        </div>
-      </div>
-    </div>
+  <section>
+    <h2>Projects</h2>
+    <ul>
+      <li>Truth or Dare App</li>
+      <li>Workout App</li>
+      <li>Portfolio Website</li>
+    </ul>
   </section>
 
-  <!-- Projects -->
-  <section class="section" id="projects">
-    <div class="container">
-      <div class="section-head">
-        <h2>Projects</h2>
-        <input id="search" class="search" type="search" placeholder="Search projects..." />
-      </div>
-
-      <div class="grid" id="projectGrid">
-        <article class="card project" data-tags="flutter game amoled">
-          <h3>Truth or Dare (AMOLED)</h3>
-          <p class="muted">Finger-based random picker with dark UI.</p>
-          <div class="meta">
-            <span class="tag">Flutter</span><span class="tag">Mobile</span>
-          </div>
-          <div class="links">
-            <a href="#" aria-label="Project link">Live</a>
-            <a href="#" aria-label="Source code link">Code</a>
-          </div>
-        </article>
-
-        <article class="card project" data-tags="flutter fitness voice">
-          <h3>Workout Voice Guide</h3>
-          <p class="muted">Simple workout routines with voice guidance.</p>
-          <div class="meta">
-            <span class="tag">Flutter</span><span class="tag">App</span>
-          </div>
-          <div class="links">
-            <a href="#">Live</a>
-            <a href="#">Code</a>
-          </div>
-        </article>
-
-        <article class="card project" data-tags="web html css js">
-          <h3>Portfolio Website</h3>
-          <p class="muted">This website template (HTML/CSS/JS).</p>
-          <div class="meta">
-            <span class="tag">Web</span><span class="tag">Frontend</span>
-          </div>
-          <div class="links">
-            <a href="#top">Open</a>
-            <a href="#">Code</a>
-          </div>
-        </article>
-      </div>
-
-      <p class="muted small" id="resultText"></p>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="section" id="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <p class="muted">This form is a demo (no backend). It will show a success message.</p>
-
-      <form class="card form" id="contactForm">
-        <div class="row">
-          <label>
-            Name
-            <input type="text" name="name" placeholder="Your name" required />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" placeholder="your@email.com" required />
-          </label>
-        </div>
-
-        <label>
-          Message
-          <textarea name="message" rows="5" placeholder="Say hi..." required></textarea>
-        </label>
-
-        <button class="btn primary" type="submit">Send Message</button>
-        <p class="muted small" id="formMsg" role="status" aria-live="polite"></p>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <p class="muted small">© <span id="year"></span> Arun. All rights reserved.</p>
-      <a class="to-top" href="#top">Back to top ↑</a>
-    </div>
+  <footer>
+    <p>© 2026 Arun Johny</p>
   </footer>
 
   <script src="script.js"></script>
